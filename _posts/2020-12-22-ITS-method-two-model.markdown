@@ -1,9 +1,16 @@
 ---
-title: "Models for ITS study"
+title: "Two methods for interrupted time series"
+subtitle: '两种不同的ITS方法'
+author: "FAN Min"
+header-style: text
+tags:
+  - Methods 
+  - R
 output:
   html_document:
     df_print: paged
   pdf_document: default
+layout: post
 ---
 
 

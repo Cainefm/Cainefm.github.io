@@ -1,10 +1,16 @@
 ---
 title: "Reading THIN"
-author: "fm"
-date: "12/13/2020"
+subtitle: 'THIN 数据读取'
+author: "FAN Min"
+header-style: text
+tags:
+  - Methods 
+  - R
 output:
   pdf_document: default
   html_document: default
+layout: post
+
 ---
 # read files by loop
 
