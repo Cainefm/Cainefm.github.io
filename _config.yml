@@ -1,11 +1,11 @@
 # Site settings
-title: FAN Min Blog
+title: Blog - FAN Min
 SEOTitle: 樊珉的博客 |  Blog
 header-img: img/home-bg.jpg
 email: cainefm@gmail.com
 description: "关于公卫流行病学，药物流行病学及数据分析 | 樊珉，FAN Min, Student, Researcher, Epidemiology, Biostatistics, Pharmocoloepidemiology | 这里是 @樊珉 的个人博客，一个悲观的学习者。"
 keyword: "樊珉, FAN Min, FM"
-url: ""              # your host, for absolute URL
+url: "http://Cainefm.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.

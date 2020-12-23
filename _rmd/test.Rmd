@@ -1,0 +1,32 @@
+---
+title: "test"
+author: "fm"
+date: "12/22/2020"
+output: 
+  md_document:
+    variant: markdown_github
+---
+
+
+# test by rmd
+
+```{r}
+x <- 1:3
+y <- 4:6
+
+plot(x,y)
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(aes(color = class)) +
+  geom_smooth(se = FALSE, method = "loess") +
+  labs(
+    title = "Fuel efficiency generally decreases with engine size",
+    subtitle = "Two seaters (sports cars) are an exception because of their light weight",
+    caption = "Data from fueleconomy.gov"
+  )
+
+```
