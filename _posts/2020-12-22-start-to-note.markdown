@@ -10,9 +10,9 @@ tags:
   - Enviornment
 ---
 
-- [Background / 背景](#Bg) 
+- [Background / 背景](#bg) 
 - [Build a blog in Github](#bb)
-- [Statistical Analysis method-R / 数据分析语言-R ](#R) 
+- [Jekyll with Rmarkdown / 将Rmarkdown上传至Blog](#R) 
 
 
 <p id = "bg"></p>
@@ -35,17 +35,10 @@ It is easy to use and build. The process is list:
 3. Instal **jekyll**
 4. Fork the template in Github. You can check varies [jekyll template ](https://jekyllrb.com/docs/themes/) online.
 
----
-
 <p id = "R"></p>
 ## Rmarkdown with jekyll
 
 The coding in R is quite simple and stratforwards. However, it is desgined for just statistical analysis. So, sometimes it will be better to learn something else to support with it, eg. python, SQL, or JAVA.
-
-```{r}
-testdb <- data.frame(a=1:3,b=4:6)
-print(testdb)
-```
 
 In the routine study, Rmarkdown is frequently used rather than markdown. However, it is not so easy to knit the Rmarkdown into the jekyll. The only way I found now is generate `md` files from `Rmarkdown` first.
 
@@ -60,7 +53,6 @@ date: '`r Sys.Date()`'
 output: 
   md_document:
     variant: markdown_github
-
 ---
 ```
 
@@ -82,8 +74,8 @@ tags:
 
 ```
 
-
-## R basic codes knit by rmarkdown
+### Example knited by rmarkdown
+#### R basic codes 
 ``` r
 x <- 1:3
 y <- 4:6
@@ -93,7 +85,7 @@ plot(x,y)
 
 ![](/img/in-post/rmarkdown-testing/unnamed-chunk-1-1.png)
 
-## plots by ggplots
+#### plots by ggplots
 ``` r
 library(ggplot2) # load the packages
 ggplot(mpg, aes(displ, hwy)) +
