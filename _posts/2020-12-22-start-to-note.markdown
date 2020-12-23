@@ -34,6 +34,7 @@ It is easy to use and build. The process is list:
 2. Register in **Github**.
 3. Instal **jekyll**
 4. Fork the template in Github. You can check varies [jekyll template ](https://jekyllrb.com/docs/themes/) online.
+5. Test locally by :  bundle exec jekyll serve
 
 <p id = "R"></p>
 ## Rmarkdown with jekyll

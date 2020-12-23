@@ -128,8 +128,6 @@ coef(test4)
 ``` r
 predicted_df <- data.frame(outcome_pred = predict(test3,testdf),Time=testdf$Time)
 predicted_df2 <- data.frame(outcome_pred = predict(test4,testdf),Time=testdf$Time,NewTime=testdf$NewTime)
-
-
 ggplot(data = testdf, aes(x = Time, y = outcome)) + 
     geom_point(color='black') +
     geom_line(color='red',data = predicted_df, aes(x=Time, y=outcome_pred))+
@@ -258,7 +256,9 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
 
 ![](/img/in-post/its/unnamed-chunk-8-3.png)
 
-I used the count to do the testing. I did not add offset and deseasonalized terms in the model.
+## Limitation
+
+The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
 -----------------------------------------------------------------------------------------------
 
 ``` r
