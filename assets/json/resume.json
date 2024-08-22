@@ -4,19 +4,17 @@
     "label": "Epidemiologist",
     "email": "minfan@connect.hku.hk",
     "url": "https://www.thefanmin.com/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "summary": "A fourth-year Ph.D. student in pharmacoepidemiology, with a focus on leveraging real-world evidence to address questions of drug safety and effectiveness.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "G06, Pauline Chan, HKU",
+      "city": "Hong Kong",
+      "countryCode": "HK"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "X",
+        "username": "fm_fanmin",
+        "url": "https://twitter.com/fm_fanmin"
       }
     ]
   },
