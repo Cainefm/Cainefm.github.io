@@ -4,15 +4,14 @@
     "label": "Epidemiologist",
     "image": "",
     "email": "minfan@connect.hku.hk",
-    "phone": "(852) 5933-2417",
+    "phone": "",
     "url": "https://Cainefm.github.io/",
     "summary": "A fourth-year Ph.D. student in pharmacoepidemiology, with a focus on leveraging real-world evidence to address questions of drug safety and effectiveness.",
     "location": {
-      "address": "G06, Pauline Chan Building, Hong Kong University",
+      "address": "G06, Pauline Chan Building, HKU",
       "postalCode": "",
       "city": "Hong Kong",
-      "countryCode": "HK",
-      "region": ""
+      "countryCode": "HK"
     },
     "profiles": [
       {
@@ -24,29 +23,13 @@
   },
   "work": [
     {
-      "name": "Department of Pharmacy and Pharmacology, University of Hong Kong",
-      "position": "Research Assistant I",
-      "url": "",
-      "startDate": "2019-06-01",
-      "endDate": "2020-10-01",
-      "summary": "Pharmacoepidemiology studies using data from the Clinical Data Analysis and Reporting System (CDARS) in Hong Kong. E.g. pneumococcal conjugate vaccine, antimicrobial resistance and Motor Neuron Disease ",
+      "name": "Institute for Advanced Study, Princeton University",
+      "position": "Professor of Theoretical Physics",
+      "url": "https://example.com",
+      "startDate": "1933-01-01",
+      "endDate": "1955-01-01",
+      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
       "highlights": ["Relativity"]
-    },
-    {
-      "name": "Emergency Medicine Unit, Faculty of Medicine, University of Hong Kong",
-      "position": "Research Assistant I, II",
-      "url": "",
-      "startDate": "2016-04-01",
-      "endDate": "2019-06-01",
-      "summary": "Studies and public services related Emergency & Accidence Department in public hospitals settings"
-    },
-    {
-      "name": "The Jockey Club School of Public Health and Primary Care, The Chinese University of Hong Kong",
-      "position": "Research Assistant I",
-      "url": "",
-      "startDate": "2015-05-01",
-      "endDate": "2016-03-01",
-      "summary": "The relationship between air pollution and tuberculosis	"
     }
   ],
   "volunteer": [
@@ -167,17 +150,12 @@
   ],
   "languages": [
     {
-      "language": "Chinese",
+      "language": "German",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    },
-    {
-      "language": "Cantonese",
       "fluency": "Fluent",
       "icon": ""
     }
