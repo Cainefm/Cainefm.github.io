@@ -20,13 +20,27 @@
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Research Department of Practice and Policy, School of Pharmacy, University College London",
+      "position": "Exchange visiting scientist",
+      "startDate": "2023-06-01",
+      "endDate": "2023-08-01",
+      "summary": "Exploring optimal antibiotics prescriptions strategies for patients with urinary tract infections with a target trial emulation framework.",
       "highlights": ["Relativity"]
+    },
+    {
+      "name": "Department of Pharmacology and Pharmacy, The University of Hong",
+      "position": "Research Assistant I",
+      "startDate": "2019-06-01",
+      "endDate": "2020-10-01",
+      "summary": "Pharmacoepidemiology studies using data from the Clinical Data Analysis and Reporting System (CDARS) in Hong Kong, e.g. pneumococcal conjugate vaccine, antimicrobial resistance, and Motor Neuron Disease.",
+      "highlights": ["Relativity"]
+    },
+    {
+      "name": "Emergency Medicine Unit, Faculty of Medicine, The University of Hong Kong",
+      "position": "Research Assistant I, II",
+      "startDate": "2019-04-01",
+      "endDate": "2020-06-01",
+      "summary": "Studies and public services related Emergency & Accidence Department in public hospitals setting."
     }
   ],
   "volunteer": [
