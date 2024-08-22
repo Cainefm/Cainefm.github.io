@@ -1,36 +1,52 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Min Fan",
+    "label": "Epidemiologist",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "minfan@connect.hku.hk",
+    "phone": "(852) 5933-2417",
+    "url": "https://Cainefm.github.io/",
+    "summary": "A fourth-year Ph.D. student in pharmacoepidemiology, with a focus on leveraging real-world evidence to address questions of drug safety and effectiveness.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "G06, Pauline Chan Building, Hong Kong University",
+      "postalCode": "",
+      "city": "Hong Kong",
+      "countryCode": "HK",
+      "region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "X",
+        "username": "fm_fanmin",
+        "url": "https://twitter.com/fm_fanmin"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Department of Pharmacy and Pharmacology, University of Hong Kong",
+      "position": "Research Assistant I",
+      "url": "",
+      "startDate": "2019-06-01",
+      "endDate": "2020-10-01",
+      "summary": "Pharmacoepidemiology studies using data from the Clinical Data Analysis and Reporting System (CDARS) in Hong Kong. E.g. pneumococcal conjugate vaccine, antimicrobial resistance and Motor Neuron Disease ",
       "highlights": ["Relativity"]
+    },
+    {
+      "name": "Emergency Medicine Unit, Faculty of Medicine, University of Hong Kong",
+      "position": "Research Assistant I, II",
+      "url": "",
+      "startDate": "2016-04-01",
+      "endDate": "2019-06-01",
+      "summary": "Studies and public services related Emergency & Accidence Department in public hospitals settings"
+    },
+    {
+      "name": "The Jockey Club School of Public Health and Primary Care, The Chinese University of Hong Kong",
+      "position": "Research Assistant I",
+      "url": "",
+      "startDate": "2015-05-01",
+      "endDate": "2016-03-01",
+      "summary": "The relationship between air pollution and tuberculosis	"
     }
   ],
   "volunteer": [
@@ -151,12 +167,17 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Chinese",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
       "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    },
+    {
+      "language": "Cantonese",
       "fluency": "Fluent",
       "icon": ""
     }
