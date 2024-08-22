@@ -6,7 +6,7 @@ subtitle: <a href='https://www.pharma.hku.hk/Research/Centre-for-Safe-Medication
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_color.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>LG06 Pauline Chan Building</p>
