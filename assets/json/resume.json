@@ -3,6 +3,15 @@
     "name": "Min Fan",
     "label": "Epidemiologist",
     "image": "",
+<<<<<<< HEAD
+    "email": "minfan@connect.hku.hk",
+    "url": "https://www.thefanmin.com",
+    "summary": "A fourth-year Ph.D. student in pharmacoepidemiology, with a focus on leveraging real-world evidence to address questions of drug safety and effectiveness",
+    "location": {
+      "address": "G06 Pauline Chan Building, HKU",
+      "city": "Hong Kong",
+      "countryCode": "HK"
+=======
     "email": "albert@einstein.de",
     "phone": "(912) 123-4567",
     "url": "https://alshedivat.github.io/al-folio/",
@@ -13,6 +22,7 @@
       "city": "San Francisco",
       "countryCode": "US",
       "region": "California"
+>>>>>>> e5946e8d587950ef5b48a5d7c12dbae866f3e554
     },
     "profiles": [
       {
