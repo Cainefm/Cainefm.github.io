@@ -22,4 +22,4 @@ I am a fourth-year Ph.D. student in pharmacoepidemiology, with a focus on levera
 
 Some of my recent work has examined the CVD complications following COVID-19 vaccination, as well as the effects of PPI use. Additionally, I have investigated the effectiveness of the COVID-19 vaccine, PCV and riluzole.
 
-Feel free to contact me through [e-mail](mailto:minfan@connect.hku.hk?subject=Test)
+Feel free to contact me through [e-mail](mailto:minfan@connect.hku.hk?subject=Test).
