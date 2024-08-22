@@ -3,21 +3,22 @@
     "name": "Min Fan",
     "label": "Epidemiologist",
     "image": "",
-    "email": "minfan@connect.hku.hk",
-    "phone": "",
-    "url": "https://Cainefm.github.io/",
-    "summary": "A fourth-year Ph.D. student in pharmacoepidemiology, with a focus on leveraging real-world evidence to address questions of drug safety and effectiveness.",
+    "email": "albert@einstein.de",
+    "phone": "(912) 123-4567",
+    "url": "https://alshedivat.github.io/al-folio/",
+    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "G06, Pauline Chan Building, HKU",
-      "postalCode": "",
-      "city": "Hong Kong",
-      "countryCode": "HK"
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
     },
     "profiles": [
       {
-        "network": "X",
-        "username": "fm_fanmin",
-        "url": "https://twitter.com/fm_fanmin"
+        "network": "Twitter",
+        "username": "AlbertEinstein",
+        "url": "https://twitter.com/AlbertEinstein"
       }
     ]
   },
