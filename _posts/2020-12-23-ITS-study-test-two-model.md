@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Two regression based methods for interrupted time series"
-subtitle: '两种不同的ITS方法'
+subtitle: "两种不同的ITS方法"
 author: "FAN Min"
 header-style: text
-tags: epi 
+tags: epi
 ---
- 
+
 ## 1. Background
 
 The textbook for ITS is the JLB’s tutorial [《Interrupted time series
@@ -22,37 +22,43 @@ But the formulas used in these two papers have a slight difference.
 
 $$Y\sim{\sf}\beta_{1}·Time+\beta_{2}·Intervention+\beta_{3}·Time·Intervention $$
 
-
 ### 2.1 The dataset lookd like:
----------------------------
+
+---
 
 ![](/img/in-post/its/Capture1.PNG)
 
 ### 2.2 Interpretation of parameters
---------------------------------
+
+---
 
 ![](/img/in-post/its/Capture3.PNG)
 
 ## 3. The AKD’s **additional model**:
----------------------------------
 
-$$Y \sim {\sf  } \beta_{1}·Time + \beta_{2}·Intervention +\beta_{3}·NewTimeAfter  Intervention
+---
+
+$$
+Y \sim {\sf  } \beta_{1}·Time + \beta_{2}·Intervention +\beta_{3}·NewTimeAfter  Intervention
 $$
 
 ### 3.1 The dataset looks like:
----------------------------
+
+---
 
 ![](/img/in-post/its/Capture2.PNG)
 
 ### 3.2 Interpretation of parameters
---------------------------------
+
+---
 
 ![](/img/in-post/its/Capture4.PNG)
 
 ## 4 The difference between two models
+
 ### 4.1 Generate a dataset
 
-``` r
+```r
 library('ggplot2')
 set.seed(999)
 testdf <- data.frame(outcome = ceiling(runif(100,1,100)),Time = 1:100, PCV = c(rep(0,70),rep(1,30)),NewTime = c(rep(0,70),1:30))
@@ -78,22 +84,22 @@ testdf
 
 ### 4.2 Model with interaction term
 
-``` r
+```r
 test1 <- glm(data=testdf,outcome~Time+PCV+Time*PCV)
 coef(test1)
 ```
 
-    ## (Intercept)        Time         PCV    Time:PCV 
+    ## (Intercept)        Time         PCV    Time:PCV
     ##  44.3055901   0.2264019 -69.8521232   0.5827194
 
 ### 4.3 Model with additional term
 
-``` r
+```r
 test2 <- glm(data=testdf,outcome~Time+PCV+NewTime)
 coef(test2)
 ```
 
-    ## (Intercept)        Time         PCV     NewTime 
+    ## (Intercept)        Time         PCV     NewTime
     ##  44.3055901   0.2264019 -29.0617683   0.5827194
 
 **Two of the paper both pointed out that the parameter of PCV is the slope changes after intervention. But the numbers are quite different.**
@@ -105,28 +111,29 @@ coef(test2)
 **I am still thinking from the formula perspective. Maybe my point of view is wrong. Pls save me.**
 
 ## 5.Slope-only model in two method
---------------------------------
 
-``` r
+---
+
+```r
 test3 <- glm(data=testdf,outcome~Time+Time:PCV)
 coef(test3)
 ```
 
-    ## (Intercept)        Time    Time:PCV 
+    ## (Intercept)        Time    Time:PCV
     ##  43.0861172   0.2523481  -0.2378050
 
-``` r
+```r
 test4 <- glm(data=testdf,outcome~Time+NewTime)
 coef(test4)
 ```
 
-    ## (Intercept)        Time     NewTime 
+    ## (Intercept)        Time     NewTime
     ##  48.5384253   0.0475497  -0.2601473
 
-``` r
+```r
 predicted_df <- data.frame(outcome_pred = predict(test3,testdf),Time=testdf$Time)
 predicted_df2 <- data.frame(outcome_pred = predict(test4,testdf),Time=testdf$Time,NewTime=testdf$NewTime)
-ggplot(data = testdf, aes(x = Time, y = outcome)) + 
+ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_point(color='black') +
     geom_line(color='red',data = predicted_df, aes(x=Time, y=outcome_pred))+
     geom_line(color='blue',data = predicted_df2,aes(x=Time,y=outcome_pred))
@@ -136,26 +143,26 @@ ggplot(data = testdf, aes(x = Time, y = outcome)) +
 
 ### 5.1. Fixed the previous problem by changing the time
 
-``` r
+```r
 test5 <- glm(data=testdf,outcome~Time+NewTime:PCV)
 coef(test5)
 ```
 
-    ## (Intercept)        Time NewTime:PCV 
+    ## (Intercept)        Time NewTime:PCV
     ##  48.5384253   0.0475497  -0.2601473
 
-``` r
+```r
 predicted_df3 <- data.frame(outcome_pred = predict(test5,testdf),Time=testdf$Time,NewTime = testdf$NewTime)
 
-ggplot(data = testdf, aes(x = Time, y = outcome)) + 
+ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_point(color='black') +
     geom_line(color='red',data = predicted_df3, aes(x=Time, y=outcome_pred))
 ```
 
 ![](/img/in-post/its/unnamed-chunk-5-1.png)
 
-``` r
-ggplot(data = testdf, aes(x = Time, y = outcome)) + 
+```r
+ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_point(color='black') +
     geom_line(color='blue',data = predicted_df2,aes(x=Time,y=outcome_pred))
 ```
@@ -163,9 +170,10 @@ ggplot(data = testdf, aes(x = Time, y = outcome)) +
 ![](/img/in-post/its/unnamed-chunk-5-2.png)
 
 ## 6. Apply to our dataset
-----------------------
 
-``` r
+---
+
+```r
 df <- read.csv('stdpm.csv')
 df$NewTime <- c(rep(0,69),1:(166-69))
 df
@@ -196,31 +204,31 @@ df
     ## 165 4.021180 8.272060      96
     ## 166 4.040964 8.189245      97
 
-``` r
+```r
 Interaction.model <- glm(data=df,pneu_ad~time+time:pcv)
 coef(Interaction.model)
 ```
 
-    ## (Intercept)        time    time:pcv 
+    ## (Intercept)        time    time:pcv
     ## 2836.755182    2.976605    6.849634
 
-``` r
+```r
 Interaction.model.adj <- glm(data=df,pneu_ad~time+NewTime:pcv)
 coef(Interaction.model.adj)
 ```
 
-    ## (Intercept)        time NewTime:pcv 
+    ## (Intercept)        time NewTime:pcv
     ## 2437.493871   15.776112   -6.887371
 
-``` r
+```r
 Additional.model <- glm(data=df,pneu_ad~time+NewTime)
 coef(Additional.model)
 ```
 
-    ## (Intercept)        time     NewTime 
+    ## (Intercept)        time     NewTime
     ## 2437.493871   15.776112   -6.887371
 
-``` r
+```r
 predicted_df.in <- data.frame(outcome_pred = predict(Interaction.model,df),Time=df$time)
 
 predicted_df.in.adj <- data.frame(outcome_pred = predict(Interaction.model.adj,df),Time=df$time)
@@ -228,7 +236,7 @@ predicted_df.in.adj <- data.frame(outcome_pred = predict(Interaction.model.adj,d
 predicted_df.ad <- data.frame(outcome_pred = predict(Additional.model,df),Time=df$time,NewTime=df$NewTime)
 
 
-ggplot(data = df,aes(x = time, y = pneu_ad)) + 
+ggplot(data = df,aes(x = time, y = pneu_ad)) +
     geom_point(color='black') +
     geom_line(color='red',data = predicted_df.in, aes(x=Time, y=outcome_pred))+
     ggtitle('JBL model')
@@ -236,8 +244,8 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
 
 ![](/img/in-post/its/unnamed-chunk-8-1.png)
 
-``` r
-ggplot(data = df,aes(x = time, y = pneu_ad)) + 
+```r
+ggplot(data = df,aes(x = time, y = pneu_ad)) +
     geom_point(color='black') +
     geom_line(color='orange',data = predicted_df.in.adj, aes(x=Time, y=outcome_pred))+
     ggtitle('JBL adjusted model')
@@ -245,8 +253,8 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
 
 ![](/img/in-post/its/unnamed-chunk-8-2.png)
 
-``` r
-ggplot(data = df,aes(x = time, y = pneu_ad)) + 
+```r
+ggplot(data = df,aes(x = time, y = pneu_ad)) +
     geom_point(color='black') +
     geom_line(color='blue',data = predicted_df.ad,aes(x=Time,y=outcome_pred))+
     ggtitle('AKD model')
@@ -256,22 +264,21 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
 
 ## Limitation
 
-The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
------------------------------------------------------------------------------------------------
+## The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
 
-``` r
+```r
 ### 4.3 Model with additional term
 testtesttest <- lm(data=testdf[testdf$PCV==0,],outcome~Time)
 coef(testtesttest)
 ```
 
-    ## (Intercept)        Time 
+    ## (Intercept)        Time
     ##  44.3055901   0.2264019
 
-``` r
+```r
 testtesttest <- lm(data=testdf[testdf$PCV==1,],outcome~Time)
 coef(testtesttest)
 ```
 
-    ## (Intercept)        Time 
+    ## (Intercept)        Time
     ## -25.5465332   0.8091212
