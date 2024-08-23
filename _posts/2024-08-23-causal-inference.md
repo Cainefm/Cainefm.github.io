@@ -4,7 +4,6 @@ title: causal inference
 date: 2024-08-23 11:12:00-0400
 description: an brief for causl inference learnt from CAUSALab
 tags: epi
-categories: sample-posts external-services
 ---
 
 As researchers in the medical world, we strive to understand not just what's happening, but _why_ it's happening.
