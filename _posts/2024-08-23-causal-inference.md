@@ -1,9 +1,10 @@
 ---
 layout: post
-title: causal inference from CAUSALab
+title: "causal inference from CAUSALab"
 date: 2024-08-23 11:12:00-0400
 author: "FAN Min"
 description: an brief for causl inference learnt from CAUSALab
+header-style: text
 tags: epi
 ---
 
