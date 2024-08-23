@@ -7,56 +7,71 @@ header-style: text
 tags: epi
 ---
 
-## 1. Background
+## Background
+
+Interrupted time series (ITS) analysis is a powerful quasi-experimental study design for evaluating the effectiveness of population-level health interventions that have been implemented at a clearly defined point in time. We have conducted and published a [exploration of the effectiveness of PCV vaccines in Hong Kong with such method](https://pubmed.ncbi.nlm.nih.gov/33858719/).
+
+The core of ITS analysis is segmeted regression model. Some people may argue that this regression-based method is not perfect cause it lack of ablility of fixing the autocorrelation and seasonality. We are not going to discuss this in this artile. In the current artile, I want to discuss the issue in the widely adapted two regression-based two methods.
+
+**Updated: the author has updated and make correction of this methods at the time of writing**
+
+Two approaches are widely adapted by [JLB 2017](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/) and [AKD 2002](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/).
+
+The core of ITS analysis is the segmented regression model, which can be expressed in two slightly different formulations based on the JLB 2017 and AKD 2002 papers:
+
+JLB 2017 **interactive** formulation:
+$$Y\sim{\sf}\beta_{0}+\beta_{1}·time_t+\beta_{2}·intervention_t+\beta_{3}·time·intervention $$
+where
+
+- Yt is the outcome variable at time t \\
+- timet is the time since the start of the study \\
+- interventiont is a dummy variable indicating the pre- or post-intervention period \\
+- (timet - time of intervention)\*intervention_t is the interaction term representing the change in slope after the intervention
+
+The interpretation of parameters in the original paper
+
+![](/assets/img/its/Capture3.PNG)
+
+---
+
+and the dataset looked like:
+
+![](/assets/img/its/Capture1.PNG)
+
+---
+
+while the formula in the AKD’s **additional model**:
+
+$$
+Y \sim {\sf  } \beta_{0}+\beta_{1}·Time + \beta_{2}·Intervention +\beta_{3}·NewTimeAfter  Intervention
+$$
+
+- Where the terms are similar, but the interaction term (time_t - time_of_intervention)\*intervention_t is replaced with time_after_intervention_t.
+
+And the interpretation of parameters in original article
+
+![](/assets/img/its/Capture4.PNG)
+
+---
+
+and the dataset looks like:
+
+![](/assets/img/its/Capture2.PNG)
+
+---
 
 The textbook for ITS is the JLB’s tutorial [《Interrupted time series
 regression for the evaluation of public health interventions: a
-tutorial》](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/).
-When i dig deeper, i found the ultimate reference was AKD articles in
+tutorial》](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/). When i dig deeper, i found the ultimate reference was AKD articles in
 2002 [《Segmented regression analysis of interrupted time series studies
 in medication use
-research》](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/).
-But the formulas used in these two papers have a slight difference.
-
-## 2. The JLB’s **interaction model**:
-
-$$Y\sim{\sf}\beta_{1}·Time+\beta_{2}·Intervention+\beta_{3}·Time·Intervention $$
-
-### 2.1 The dataset lookd like:
+research》](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/). But the formulas used in these two papers have a slight difference.
 
 ---
 
-![](/img/in-post/its/Capture1.PNG)
+### The difference between two models
 
-### 2.2 Interpretation of parameters
-
----
-
-![](/img/in-post/its/Capture3.PNG)
-
-## 3. The AKD’s **additional model**:
-
----
-
-$$
-Y \sim {\sf  } \beta_{1}·Time + \beta_{2}·Intervention +\beta_{3}·NewTimeAfter  Intervention
-$$
-
-### 3.1 The dataset looks like:
-
----
-
-![](/img/in-post/its/Capture2.PNG)
-
-### 3.2 Interpretation of parameters
-
----
-
-![](/img/in-post/its/Capture4.PNG)
-
-## 4 The difference between two models
-
-### 4.1 Generate a dataset
+#### Generate a dataset
 
 ```r
 library('ggplot2')
@@ -82,7 +97,7 @@ testdf
     ## 99       50   99   1      29
     ## 100      90  100   1      30
 
-### 4.2 Model with interaction term
+#### Model with interaction term
 
 ```r
 test1 <- glm(data=testdf,outcome~Time+PCV+Time*PCV)
@@ -92,7 +107,7 @@ coef(test1)
     ## (Intercept)        Time         PCV    Time:PCV
     ##  44.3055901   0.2264019 -69.8521232   0.5827194
 
-### 4.3 Model with additional term
+#### Model with additional term
 
 ```r
 test2 <- glm(data=testdf,outcome~Time+PCV+NewTime)
@@ -102,17 +117,19 @@ coef(test2)
     ## (Intercept)        Time         PCV     NewTime
     ##  44.3055901   0.2264019 -29.0617683   0.5827194
 
-**Two of the paper both pointed out that the parameter of PCV is the slope changes after intervention. But the numbers are quite different.**
+The two papers, JLB 2017 and AKD 2002, both highlight that the key parameter of interest is the change in slope after the intervention. However, the specific formulations and the resulting numerical estimates for this slope change parameter are quite different between the two papers.
 
-**I think one of them is wrong, or we should present it after some adjustments like Dr.Qiu did in the Wechat group. It may be the reason why we always see a level change even we just used the slope-only model in JLB’s method.**
+This discrepancy in the slope change estimates is puzzling to me. One possibility is that one of the formulations may be incorrect or inappropriate. Alternatively, as I mentioned, we may need to consider some adjustments to the models, as Dr. Qiu suggested in the WeChat group discussion.
 
-**I am not going to say JLB’s method is wrong. I consider that it is not appropriate for the slope-only model, and we should be cautious when interpreting the level’s parameter.**
+Another observation I make is that even when using the "slope-only" model as outlined in the JLB 2017 method, I often still see a significant level change parameter (\beta_2). This seems counterintuitive to me, as the slope-only model is intended to capture only the change in slope, not the level.
 
-**I am still thinking from the formula perspective. Maybe my point of view is wrong. Pls save me.**
+Given these concerns, I am hesitant to outright state that the JLB 2017 method is wrong. However, I believe that the JLB 2017 formulation may not be the most appropriate for a pure slope-only model. I suggest we should be cautious in interpreting the level change parameter (\beta_2) from this method, as it may not be meaningful or reliable in the context of a slope-only intervention analysis.
 
-## 5.Slope-only model in two method
+Overall, my perspective is that the differences in the slope change estimates between the two papers, as well as the potential issues with interpreting the level change parameter in the JLB 2017 method, warrant further investigation and careful consideration before drawing conclusions about the intervention effect.
 
 ---
+
+### Slope-only model in two method
 
 ```r
 test3 <- glm(data=testdf,outcome~Time+Time:PCV)
@@ -139,9 +156,9 @@ ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_line(color='blue',data = predicted_df2,aes(x=Time,y=outcome_pred))
 ```
 
-![](/img/in-post/its/unnamed-chunk-4-1.png)
+![](/assets/img/its/unnamed-chunk-4-1.png)
 
-### 5.1. Fixed the previous problem by changing the time
+#### Fixed the previous problem by changing the time
 
 ```r
 test5 <- glm(data=testdf,outcome~Time+NewTime:PCV)
@@ -159,7 +176,7 @@ ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_line(color='red',data = predicted_df3, aes(x=Time, y=outcome_pred))
 ```
 
-![](/img/in-post/its/unnamed-chunk-5-1.png)
+![](/assets/img/its/unnamed-chunk-5-1.png)
 
 ```r
 ggplot(data = testdf, aes(x = Time, y = outcome)) +
@@ -167,11 +184,11 @@ ggplot(data = testdf, aes(x = Time, y = outcome)) +
     geom_line(color='blue',data = predicted_df2,aes(x=Time,y=outcome_pred))
 ```
 
-![](/img/in-post/its/unnamed-chunk-5-2.png)
-
-## 6. Apply to our dataset
+![](/assets/img/its/unnamed-chunk-5-2.png)
 
 ---
+
+### Apply to our dataset
 
 ```r
 df <- read.csv('stdpm.csv')
@@ -242,7 +259,7 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
     ggtitle('JBL model')
 ```
 
-![](/img/in-post/its/unnamed-chunk-8-1.png)
+![](/assets/img/its/unnamed-chunk-8-1.png)
 
 ```r
 ggplot(data = df,aes(x = time, y = pneu_ad)) +
@@ -251,7 +268,7 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
     ggtitle('JBL adjusted model')
 ```
 
-![](/img/in-post/its/unnamed-chunk-8-2.png)
+![](/assets/img/its/unnamed-chunk-8-2.png)
 
 ```r
 ggplot(data = df,aes(x = time, y = pneu_ad)) +
@@ -260,11 +277,11 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
     ggtitle('AKD model')
 ```
 
-![](/img/in-post/its/unnamed-chunk-8-3.png)
+![](/assets/img/its/unnamed-chunk-8-3.png)
 
-## Limitation
+### Limitation
 
-## The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
+#### The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
 
 ```r
 ### 4.3 Model with additional term
