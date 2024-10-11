@@ -12,185 +12,249 @@
     },
     "profiles": [
       {
-        "network": "X",
-        "username": "fm_fanmin",
-        "url": "https://twitter.com/fm_fanmin"
+        "username": "Min Fan",
+        "url": "https://orcid.org/0000-0001-9074-633X",
+        "network": "ORCID"
+      },
+      {
+        "username": "Cainefm",
+        "url": "https://github.com/Cainefm",
+        "network": "github"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "University College London",
+      "location": "London, UK",
+      "description": "",
+      "position": "Exchange visiting scientist",
+      "url": "https://www.ucl.ac.uk",
+      "startDate": "2023-06-01",
+      "endDate": "2023-09-01",
+      "summary": "Exploring the application of target trial emulation and high dimensional propensity score (HDPS) with datasets in UK or HK",
+      "highlights": [
+        "Exploring optimal antibiotic prescription strategies for patients with urinary tract infections with a target trial emulation framework: application of clone-censor-weight approach with Clinical Practice Research Datalink (CPRD) ",
+        "Association between antihypertensive drug and dementia development with th HDPS  (R-package development deployed in https://github.com/Cainefm/hdps)"
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Department of pharmacology and pharmacy, The University of Hong Kong",
+      "location": "Hong Kong",
+      "description": "",
+      "position": "Research Assistant I",
+      "url": "https://www.pharma.hku.hk/",
+      "startDate": "2019-09-01",
+      "endDate": "2022-10-01",
+      "summary": "Pharmacoepidemiology studies which most are using data from the Clinical Data Analysis and Reporting System (CDARS) in Hong Kong (HK)",
+      "highlights": [
+        "The effectiveness of the pneumococcal conjugate vaccine in HK",
+        "Epidemiology of antimicrobial resistance: Carbapenemase-producing Enterobacteriaceae and Multi-Drug/Extremely Drug Resistance Pseudomonas aeruginosa in HK",
+        "Epidemiology of the Motor Neuron Disease and treatment outcome after Riluzole in HK",
+        "Post-market safety events for the orphan drugs from the US FDA database",
+        "A summary of the global orphan drug policy"
+      ]
+    },
+    {
+      "name": "Faculty of Medicine, The University of Hong Kong",
+      "location": "Hong Kong",
+      "description": "",
+      "position": "Research Assistant I, II",
+      "url": "https://www.pharma.hku.hk/",
+      "startDate": "2016-04-01",
+      "endDate": "2019-09-01",
+      "summary": "Studies and public services related Emergency & Accidence Department in public hospitals settings",
+      "highlights": [
+        "The availability, accessibility, and geographical distribution of Automated External Defibrillators in the urban cities",
+        "Residential knowledge attitude and practice about the first-aid",
+        "First aid training in the public"
+      ]
+    },
+    {
+      "name": "The Jockey Club School of Public Health and Primary Care, The Chinese University of Hong Kong",
+      "location": "Hong Kong",
+      "description": "",
+      "position": "Research Assistant II",
+      "url": "https://www.sphpc.cuhk.edu.hk/",
+      "startDate": "2015-05-01",
+      "endDate": "2016-03-01",
+      "summary": "Public health research about tuberculosis",
+      "highlights": [
+        "The relationship between air pollution and tuberculosis",
+        "Data cleaning and analysis for a large prospective cohort about tuberculosis in mainland China"
+      ]
     }
   ],
+  "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "University of Hong Kong ",
+      "url": "https://www.pharma.hku.hk/",
+      "area": "Pharmocoepidemiology",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "startDate": "2020-11-01",
+      "endDate": "2024-11-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "The Chinese University of Hong Kong",
+      "url": "https://www.sphpc.cuhk.edu.hk/",
+      "area": "Master of Public Health",
+      "studyType": "Master",
+      "startDate": "2014-09-01",
+      "endDate": "2015-05-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Guangzhou Medicine University",
+      "url": "https://www.en.gzhmu.edu.cn/",
+      "area": "Preventive medicine",
+      "studyType": "Bachelor",
+      "startDate": "2009-09-01",
+      "endDate": "2014-06-01",
+      "score": "",
+      "courses": []
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "title": "Scholarship for 14th Asian Conference on Pharmacoepidemiology (ACPE 2022)",
+      "date": "2020-10-01"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "title": "Scholarship for ICPE 2022: Advancing Pharmacoepidemiology and Real-World Evidence for the Global Community",
+      "date": "2022-08-01"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "title": "Scholarship for ICPE 2023: The Global Home for the Science of Real-World Evidence",
+      "date": "2023-08-01"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "title": "Scholarship for ICPE 2024: Celebrating 40 years of Advancing Pharmacoepidemiology",
+      "date": "2024-08-01"
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Epidemiology and risk factors for carbapenemase-producing Enterobacteriaceae carriage in the hospital: A population-based nested case-control study",
+      "authors": ["Min Fan"],
+      "journal": "Journal of Global Antimicrobial Resistance",
+      "releaseDate": "2023-06",
+      "doi": "10.1016/j.jgar.2023.03.013",
+      "summary": ""
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Risk of carditis after three doses of vaccination with mRNA (BNT162b2) or inactivated (CoronaVac) covid-19 vaccination: a self-controlled cases series and a case–control study",
+      "authors": ["Min Fan"],
+      "journal": "The Lancet Regional Health - Western Pacific",
+      "releaseDate": "2023-06",
+      "doi": "10.1016/j.lanwpc.2023.100745",
+      "summary": ""
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Effectiveness of BNT162b2 after extending the primary series dosing interval in children and adolescents aged 5–17",
+      "authors": ["Min Fan"],
+      "journal": "Nature Communications",
+      "releaseDate": "2023-04",
+      "doi": "10.1038/s41467-023-37556-z",
+      "summary": ""
+    },
+    {
+      "name": "The effectiveness and safety of mRNA (BNT162b2) and inactivated (CoronaVac) COVID-19 vaccines among individuals with chronic kidney diseases",
+      "authors": ["Min Fan"],
+      "journal": "Kidney International",
+      "releaseDate": "2022-10",
+      "doi": "10.1016/j.kint.2022.07.018",
+      "summary": ""
+    },
+    {
+      "name": "Thromboembolic events and hemorrhagic stroke after mRNA (BNT162b2) and inactivated (CoronaVac) covid-19 vaccination: A self-controlled case series study",
+      "authors": ["Min Fan"],
+      "journal": "eClinicalMedicine",
+      "releaseDate": "2022-08",
+      "doi": "10.1016/j.eclinm.2022.101504",
+      "summary": ""
+    },
+    {
+      "name": "Messenger RNA Coronavirus Disease 2019 (COVID-19) Vaccination With BNT162b2 Increased Risk of Bell's Palsy: A Nested Case-Control and Self-Controlled Case Series Study",
+      "authors": ["Min Fan"],
+      "journal": "Clinical Infectious Diseases",
+      "releaseDate": "2022-06",
+      "doi": "10.1093/cid/ciac460",
+      "summary": ""
+    },
+    {
+      "name": "Mortality-causing mechanisms and healthcare resource utilisation of treatment-resistant depression: A six-year population-based cohort study",
+      "authors": ["Min Fan"],
+      "journal": "The Lancet Regional Health - Western Pacific",
+      "releaseDate": "2022-05",
+      "doi": "10.1016/j.lanwpc.2022.100426",
+      "summary": ""
+    },
+    {
+      "name": "COVID-19 vaccines and risks of hematological abnormalities: Nested case\textendashcontrol and self-controlled case series study",
+      "journal": "American Journal of Hematology",
+      "authors": ["Min Fan"],
+      "releaseDate": "2022-02",
+      "doi": "10.1002/ajh.26478",
+      "summary": ""
+    },
+    {
+      "name": "Walking Route–Based Calculation is Recommended for Optimizing Deployment of Publicly Accessible Defibrillators in Urban Cities",
+      "authors": ["Min Fan"],
+      "journal": "Journal of the American Heart Association",
+      "releaseDate": "2020-01",
+      "doi": "10.1161/jaha.119.014398",
+      "summary": ""
+    },
+    {
+      "name": "Readiness of Hong Kong secondary school teachers for teaching cardiopulmonary resuscitation in schools: A questionnaire survey",
+      "authors": ["Min Fan"],
+      "journal": "Hong Kong Journal of Emergency Medicine",
+      "releaseDate": "2018-08",
+      "doi": "https://doi.org/10.1177%2F1024907918797532;10.1177/1024907918797532",
+      "summary": ""
+    },
+    {
+      "name": "Ambient sulfur dioxide levels associated with reduced risk of initial outpatient visits for tuberculosis: A population based time series analysis",
+      "authors": ["Min Fan"],
+      "journal": "Environmental Pollution",
+      "releaseDate": "2017-09",
+      "doi": "10.1016/j.envpol.2017.05.051",
+      "summary": ""
     }
   ],
   "skills": [
     {
-      "name": "Physics",
+      "name": "Data analysis",
       "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "summary": "Expert level proficiency in medical data analysis with extensive knowledge in multiple programming languages",
+      "keywords": ["R", "SAS", "Python", "MySQL", "PostgreSQL"]
+    },
+    {
+      "name": "Epidemiology and Biostatistics",
+      "level": "Master",
+      "summary": "",
+      "keywords": []
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "fluency": "Advanced"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Cantonese",
+      "fluency": "Fluent"
     }
   ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+  "interests": [],
+  "references": [],
+  "projects": []
 }
