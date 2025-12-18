@@ -26,7 +26,7 @@ tags: epi
 
 ## Definition
 
-[Immortal time bias](https://academic-oup-com/aje/article/167/4/492/233064?login=false) is a span of cohort follow-up during which, because of exposure definition, the outcome under study could not occur.
+[Immortal time bias](https://academic.oup.com/aje/article/167/4/492/233064?login=false) is a span of cohort follow-up during which, because of exposure definition, the outcome under study could not occur.
 
 Most of this bias would not be observed in an active comparator new user design. In other words, immortal time bias usually exists in studies that: (1) lack an active comparator, or (2) include prevalent users. It is also common when exploring combination therapy.
 
