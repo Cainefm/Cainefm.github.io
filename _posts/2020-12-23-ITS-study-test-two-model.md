@@ -9,24 +9,25 @@ tags: epi
 
 ## Background
 
-Interrupted time series (ITS) analysis is a powerful quasi-experimental study design for evaluating the effectiveness of population-level health interventions that have been implemented at a clearly defined point in time. We have conducted and published a [exploration of the effectiveness of PCV vaccines in Hong Kong with such method](https://pubmed.ncbi.nlm.nih.gov/33858719/).
+Interrupted time series (ITS) analysis is a powerful quasi-experimental study design for evaluating the effectiveness of population-level health interventions that have been implemented at a clearly defined point in time. We have conducted and published an [exploration of the effectiveness of PCV vaccines in Hong Kong using this method](https://pubmed.ncbi.nlm.nih.gov/33858719/).
 
-The core of ITS analysis is segmeted regression model. Some people may argue that this regression-based method is not perfect cause it lack of ablility of fixing the autocorrelation and seasonality. We are not going to discuss this in this artile. In the current artile, I want to discuss the issue in the widely adapted two regression-based two methods.
+The core of ITS analysis is the segmented regression model. Some people may argue that this regression-based method is not perfect because it lacks the ability to account for autocorrelation and seasonality. We are not going to discuss this in this article. In the current article, I want to discuss the issue in the widely adopted two regression-based methods.
 
-**Updated: the author has updated and make correction of this methods at the time of writing**
+**Updated: The author has updated and made corrections to these methods at the time of writing.**
 
-Two approaches are widely adapted by [JLB 2017](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/) and [AKD 2002](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/).
+Two approaches are widely adopted by [JLB 2017](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/) and [AKD 2002](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/).
 
 The core of ITS analysis is the segmented regression model, which can be expressed in two slightly different formulations based on the JLB 2017 and AKD 2002 papers:
 
 JLB 2017 **interactive** formulation:
-$$Y\sim{\sf}\beta_{0}+\beta_{1}·time_t+\beta_{2}·intervention_t+\beta_{3}·time·intervention $$
+$$Y_t = \beta_{0} + \beta_{1} \cdot time_t + \beta_{2} \cdot intervention_t + \beta_{3} \cdot time \cdot intervention_t$$
+
 where
 
-- Yt is the outcome variable at time t \\
-- timet is the time since the start of the study \\
-- interventiont is a dummy variable indicating the pre- or post-intervention period \\
-- (timet - time of intervention)\*intervention_t is the interaction term representing the change in slope after the intervention
+- $Y_t$ is the outcome variable at time $t$
+- $time_t$ is the time since the start of the study
+- $intervention_t$ is a dummy variable indicating the pre- or post-intervention period
+- $(time_t - time\_of\_intervention) \cdot intervention_t$ is the interaction term representing the change in slope after the intervention
 
 The interpretation of parameters in the original paper
 
@@ -40,13 +41,13 @@ and the dataset looked like:
 
 ---
 
-while the formula in the AKD’s **additional model**:
+while the formula in the AKD's **additional model**:
 
 $$
-Y \sim {\sf  } \beta_{0}+\beta_{1}·Time + \beta_{2}·Intervention +\beta_{3}·NewTimeAfter  Intervention
+Y_t = \beta_{0} + \beta_{1} \cdot Time_t + \beta_{2} \cdot Intervention_t + \beta_{3} \cdot NewTimeAfterIntervention_t
 $$
 
-- Where the terms are similar, but the interaction term (time_t - time_of_intervention)\*intervention_t is replaced with time_after_intervention_t.
+- Where the terms are similar, but the interaction term $(time_t - time\_of\_intervention) \cdot intervention_t$ is replaced with $time\_after\_intervention_t$.
 
 And the interpretation of parameters in original article
 
@@ -60,12 +61,7 @@ and the dataset looks like:
 
 ---
 
-The textbook for ITS is the JLB’s tutorial [《Interrupted time series
-regression for the evaluation of public health interventions: a
-tutorial》](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/). When i dig deeper, i found the ultimate reference was AKD articles in
-2002 [《Segmented regression analysis of interrupted time series studies
-in medication use
-research》](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/). But the formulas used in these two papers have a slight difference.
+The textbook for ITS is the JLB's tutorial [《Interrupted time series regression for the evaluation of public health interventions: a tutorial》](https://pubmed.ncbi.nlm.nih.gov/27283160-interrupted-time-series-regression-for-the-evaluation-of-public-health-interventions-a-tutorial/). When I dug deeper, I found the ultimate reference was the AKD article from 2002 [《Segmented regression analysis of interrupted time series studies in medication use research》](https://pubmed.ncbi.nlm.nih.gov/12174032-segmented-regression-analysis-of-interrupted-time-series-studies-in-medication-use-research/). However, the formulas used in these two papers have a slight difference.
 
 ---
 
@@ -121,9 +117,9 @@ The two papers, JLB 2017 and AKD 2002, both highlight that the key parameter of 
 
 This discrepancy in the slope change estimates is puzzling to me. One possibility is that one of the formulations may be incorrect or inappropriate. Alternatively, as I mentioned, we may need to consider some adjustments to the models, as Dr. Qiu suggested in the WeChat group discussion.
 
-Another observation I make is that even when using the "slope-only" model as outlined in the JLB 2017 method, I often still see a significant level change parameter (\beta_2). This seems counterintuitive to me, as the slope-only model is intended to capture only the change in slope, not the level.
+Another observation I make is that even when using the "slope-only" model as outlined in the JLB 2017 method, I often observe a significant level change parameter ($\beta_2$). This seems counterintuitive to me, as the slope-only model is intended to capture only the change in slope, not the level.
 
-Given these concerns, I am hesitant to outright state that the JLB 2017 method is wrong. However, I believe that the JLB 2017 formulation may not be the most appropriate for a pure slope-only model. I suggest we should be cautious in interpreting the level change parameter (\beta_2) from this method, as it may not be meaningful or reliable in the context of a slope-only intervention analysis.
+Given these concerns, I am hesitant to outright state that the JLB 2017 method is wrong. However, I believe that the JLB 2017 formulation may not be the most appropriate for a pure slope-only model. I suggest we should be cautious in interpreting the level change parameter ($\beta_2$) from this method, as it may not be meaningful or reliable in the context of a slope-only intervention analysis.
 
 Overall, my perspective is that the differences in the slope change estimates between the two papers, as well as the potential issues with interpreting the level change parameter in the JLB 2017 method, warrant further investigation and careful consideration before drawing conclusions about the intervention effect.
 
@@ -281,7 +277,7 @@ ggplot(data = df,aes(x = time, y = pneu_ad)) +
 
 ### Limitation
 
-#### The possion regression should be used in the model rather than count data. And I did not add offset and deseasonalized terms in the model.
+#### Poisson regression should be used for count data rather than linear regression. I have not added offset and deseasonalized terms in the model.
 
 ```r
 ### 4.3 Model with additional term
