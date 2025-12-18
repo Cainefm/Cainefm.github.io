@@ -34,7 +34,7 @@ Most of this bias would not be observed in an active comparator new user design.
 
 ### 1. Inconsistent follow-up rules between groups
 
-We should use one set of rules, not two different rules, for exposure and control groups. For example, if follow-up starts from treatment initiation in the exposure group but from diagnosis in the control group, this creates bias. [Reference](https://www-bmj-com/content/340/bmj.b5087)
+We should use one set of rules, not two different rules, for exposure and control groups. For example, if follow-up starts from treatment initiation in the exposure group but from diagnosis in the control group, this creates bias. [Reference](https://www.bmj.com/content/340/bmj.b5087)
 
 For instance, if patients in the treatment group are required to survive until their first prescription, they may inherently be healthier than those in the untreated group. This can skew results and lead to incorrect conclusions about the effectiveness of treatments.
 
@@ -50,7 +50,7 @@ In this scenario, some patients who experienced the outcome or death before foll
 
 ### 4. Exposure-based cohorts
 
-According to Suissa's description, another type of issue comes from [exposure-based cohorts](https://academic-oup-com/aje/article/167/4/492/233064?login=false). In a [study](https://erj.ersjournals.com/content/20/4/819.short) comparing combination therapies to single therapies, the index date for combination therapies is the time point of the second drug initiation. This requires patients to survive until the initiation of the second drug, which can lead to immortal time bias, as only healthier individuals who can tolerate the first drug will be included.
+According to Suissa's description, another type of issue comes from [exposure-based cohorts](https://doi.org/10.1093/aje/kwm324). In a [study](https://erj.ersjournals.com/content/20/4/819.short) comparing combination therapies to single therapies, the index date for combination therapies is the time point of the second drug initiation. This requires patients to survive until the initiation of the second drug, which can lead to immortal time bias, as only healthier individuals who can tolerate the first drug will be included.
 
 ## Solutions
 
