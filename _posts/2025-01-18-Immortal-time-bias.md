@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A understanding of Immortal time bias when doing a research
+title: An understanding of immortal time bias in research
 date: 2025-01-18 11:59:00-0400
 description: "Immortal time bias"
 header-style: text
@@ -11,9 +11,9 @@ tags: epi
 
 ## Abbreviations
 
-- **Rx**: prescription  
-- **Dx**: diagnosis  
-- **FU**: follow-up   
+- **Rx**: prescription
+- **Dx**: diagnosis
+- **FU**: follow-up
 - **Index date**: day 0, start of observation
 
 ## Key Points
